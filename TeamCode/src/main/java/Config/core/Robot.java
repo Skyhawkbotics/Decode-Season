@@ -39,8 +39,15 @@ public class Robot {
         follower.setTeleOpMovementVectors(-currentG1.left_stick_y * speed,  speed * -currentG1.left_stick_x , speed * -currentG1.right_stick_x);
         if(currentG1.a && prevG1.a) {
             e.to_full();
-        } else if(currentG1.square && currentG1.square) {
+        } else if(currentG1.square && prevG1.square) {
             e.to_zero();
+        }
+        if(currentG1.left_bumper && prevG1.left_bumper) {
+            i.intake_full();
+        } else if(currentG1.left_trigger > 0.5 && prevG1.left_trigger > 0.5) {
+            i.barf();
+        } else if(currentG1.right_bumper && prevG1.right_bumper) {
+            i.idle();
         }
     }
 }
