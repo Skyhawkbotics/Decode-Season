@@ -5,6 +5,7 @@ import com.pedropathing.localization.Pose;
 import com.pedropathing.pathgen.BezierCurve;
 import com.pedropathing.pathgen.BezierLine;
 import com.pedropathing.pathgen.Path;
+import com.pedropathing.pathgen.PathChain;
 import com.pedropathing.pathgen.Point;
 import com.pedropathing.util.Timer;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
@@ -19,6 +20,7 @@ public class netzoneauto extends OpMode {
     private Timer pathTimer, actionTimer, opmodeTimer;
 
     private int pathState;
+    private PathChain pushSample;
 
     private Pose startPose = new Pose(10, 110);
     private Pose point1 = new Pose(62.000, 101.000);
@@ -27,22 +29,24 @@ public class netzoneauto extends OpMode {
     private Path line1, line2;
 
     public void buildPaths() {
-        line1 = new Path(new BezierCurve(new Point(startPose), new Point(38.000, 110.000, Point.CARTESIAN), new Point(point1)));
-        line1.setTangentHeadingInterpolation();
-        line2 = new Path(new BezierCurve(new Point(point1), new Point(52.000, 117.000, Point.CARTESIAN), new Point(netZone)));
-        line2.setTangentHeadingInterpolation();
-        line2.setReversed(true);
+        pushSample = follower.pathBuilder()
+                .addPath(new BezierCurve(new Point(startPose), new Point(38.000, 110.000, Point.CARTESIAN), new Point(point1)))
+                    .setTangentHeadingInterpolation()
+
+                .addPath(new BezierCurve(new Point(point1), new Point(55.18191603875135, 121.36921420882669, Point.CARTESIAN), new Point(netZone)))
+                    .setTangentHeadingInterpolation()
+                .setReversed(true)
+                .build();
     }
 
     public void autonomousPathUpdate() {
         switch (pathState) {
             case 0:
-                follower.followPath(line1);
                 setPathState(1);
                 break;
             case 1:
                 if(!follower.isBusy()) {
-                    follower.followPath(line2);
+                    follower.followPath(pushSample);
                     setPathState(2);
                 }
                 break;
