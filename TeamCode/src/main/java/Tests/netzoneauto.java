@@ -19,12 +19,16 @@ public class netzoneauto extends OpMode {
 
     private int pathState;
 
-    private Path line1, line2, line3, line4;
+    private Pose startPose = new Pose(10, 110);
+    private Pose point1 = new Pose(83,110);
+    private Pose netZone = new Pose(16,127);
+
+    private Path line1, line2;
 
     public void buildPaths() {
-        line1 = new Path(new BezierLine(new Point(10, 110), new Point(83, 110)));
+        line1 = new Path(new BezierLine(new Point(startPose), new Point(point1)));
         line1.setTangentHeadingInterpolation();
-        line2 = new Path(new BezierLine(new Point(83, 110), new Point(16, 127)));
+        line2 = new Path(new BezierLine(new Point(point1), new Point(netZone)));
         line2.setTangentHeadingInterpolation();
         line2.setReversed(true);
     }
@@ -61,7 +65,7 @@ public class netzoneauto extends OpMode {
         opmodeTimer.resetTimer();
 
         follower = new Follower(hardwareMap, FConstants.class, LConstants.class);
-        follower.setStartingPose(new Pose(10, 110));
+        follower.setStartingPose(startPose);
         buildPaths();
     }
 
