@@ -29,7 +29,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "right traj", group = "AUTO")
+@Autonomous(name = "right traj", group = "Z")
 public class trajectory_planning extends OpMode {
 
     private Follower follower; // THe drivetrain with the calculations needed for path following

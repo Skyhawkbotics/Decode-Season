@@ -35,7 +35,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "RIGHT AUTO RUN ON", group = "AUTO")
+@Autonomous(name = "RIGHT AUTO RUN ON", group = "Z")
 /// 5+0 for state
 
 // its a 4+0

@@ -27,7 +27,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "LEFT AUTO", group = "AUTO")
+@Autonomous(name = "LEFT AUTO", group = "Z")
 
 public class left_auto extends OpMode {
 
