@@ -23,7 +23,7 @@ import pedroPathing.constants.FConstants;
 import pedroPathing.constants.LConstants;
 
 @Config
-@Autonomous(name = "arm auto arm", group = "AUTO")
+@Autonomous(name = "arm auto arm", group = "Z")
 public class arm_auto_code extends OpMode {
     private Follower follower;
     private Timer opmodeTimer; // Timers for progression of states
