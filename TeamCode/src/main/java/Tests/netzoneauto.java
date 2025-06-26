@@ -2,6 +2,7 @@ package Tests;
 
 import com.pedropathing.follower.Follower;
 import com.pedropathing.localization.Pose;
+import com.pedropathing.pathgen.BezierCurve;
 import com.pedropathing.pathgen.BezierLine;
 import com.pedropathing.pathgen.Path;
 import com.pedropathing.pathgen.Point;
@@ -20,15 +21,15 @@ public class netzoneauto extends OpMode {
     private int pathState;
 
     private Pose startPose = new Pose(10, 110);
-    private Pose point1 = new Pose(83,110);
-    private Pose netZone = new Pose(16,127);
+    private Pose point1 = new Pose(62.000, 101.000);
+    private Pose netZone = new Pose(17,128);
 
     private Path line1, line2;
 
     public void buildPaths() {
-        line1 = new Path(new BezierLine(new Point(startPose), new Point(point1)));
+        line1 = new Path(new BezierCurve(new Point(startPose), new Point(38.000, 110.000, Point.CARTESIAN), new Point(point1)));
         line1.setTangentHeadingInterpolation();
-        line2 = new Path(new BezierLine(new Point(point1), new Point(netZone)));
+        line2 = new Path(new BezierCurve(new Point(point1), new Point(52.000, 117.000, Point.CARTESIAN), new Point(netZone)));
         line2.setTangentHeadingInterpolation();
         line2.setReversed(true);
     }
