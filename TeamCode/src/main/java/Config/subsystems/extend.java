@@ -31,8 +31,9 @@ public class extend {
         this.telemetry = new MultipleTelemetry(telemetry, FtcDashboard.getInstance().getTelemetry());
 
         out = hardwareMap.get(DcMotor.class, outmotorName);
+        out.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         out.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        out.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        out.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
 
         pid = new PIDController(ep, ei, ed);
     }

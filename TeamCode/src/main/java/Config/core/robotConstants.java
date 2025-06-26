@@ -12,7 +12,7 @@ public class robotConstants {
 
     public static int zero = 0;
 
-    public static int max = 600;
+    public static int max = 2200;
 
     /// intake
     public static double intake_speed = 0.5;
