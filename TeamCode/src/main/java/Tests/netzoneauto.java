@@ -23,17 +23,17 @@ public class netzoneauto extends OpMode {
     private PathChain pushSample;
 
     private Pose startPose = new Pose(10, 110);
-    private Pose point1 = new Pose(62.000, 101.000);
+    private Pose point1 = new Pose(63.2, 108);
     private Pose netZone = new Pose(17,128);
 
     private Path line1, line2;
 
     public void buildPaths() {
         pushSample = follower.pathBuilder()
-                .addPath(new BezierCurve(new Point(startPose), new Point(38.000, 110.000, Point.CARTESIAN), new Point(point1)))
+                .addPath(new BezierCurve(new Point(startPose), new Point(49, 111, Point.CARTESIAN), new Point(point1)))
                     .setTangentHeadingInterpolation()
 
-                .addPath(new BezierCurve(new Point(point1), new Point(55.18191603875135, 121.36921420882669, Point.CARTESIAN), new Point(netZone)))
+                .addPath(new BezierCurve(new Point(point1), new Point(32, 126, Point.CARTESIAN), new Point(netZone)))
                     .setTangentHeadingInterpolation()
                 .setReversed(true)
                 .build();
