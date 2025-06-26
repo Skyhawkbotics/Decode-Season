@@ -29,7 +29,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "Old 4+0", group = "AUTO")
+@Autonomous(name = "Old 4+0", group = "Z")
 ///* This is the Spark invitational auto
 /// We won spark 2nd in placement, 1st pick alliance, and also 2nd inspire.
 /// This  is a 4+0 autonomous and park for the into the deep season, using bezier curves and linear interpolation, along with a nano-second timer
@@ -54,7 +54,7 @@ public class right_auto_old extends OpMode {
     private Pose pickupPose1 = new Pose(pickup_x,18,Math.toRadians(180)); // first pickup poses
 
     /// hang poses
-    private Pose hangPose = new Pose(35, 74, Math.toRadians(0)); // Hits it pretty hard, but its fine
+    private Pose hangPose = new Pose(35, 74); // Hits it pretty hard, but its fine
     private Pose firsthangPose = new Pose(36.1,71,0); // Quick hang, then back
     private Pose secondhangPose = new Pose(36.1,65,0); // Should be quick hang, but idk they all mess up around here but somehow everything just works fine
     private Pose thirdhangPose = new Pose(36.3, 72,0); // Last hang

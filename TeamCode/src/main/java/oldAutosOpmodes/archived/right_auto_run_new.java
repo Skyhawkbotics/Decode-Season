@@ -33,7 +33,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "REAL RIGHT AUTO", group = "AUTO")
+@Autonomous(name = "REAL RIGHT AUTO", group = "Z")
 /// 5+0 for state
 public class right_auto_run_new extends OpMode {
 
