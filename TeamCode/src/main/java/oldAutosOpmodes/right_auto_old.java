@@ -14,6 +14,7 @@ import com.pedropathing.pathgen.Point;
 import com.pedropathing.util.NanoTimer;
 import com.pedropathing.util.Timer;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -29,7 +30,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "Old 4+0", group = "Z")
+@Disabled
 ///* This is the Spark invitational auto
 /// We won spark 2nd in placement, 1st pick alliance, and also 2nd inspire.
 /// This  is a 4+0 autonomous and park for the into the deep season, using bezier curves and linear interpolation, along with a nano-second timer

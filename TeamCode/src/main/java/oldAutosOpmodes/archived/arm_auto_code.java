@@ -9,6 +9,7 @@ import com.pedropathing.localization.Pose;
 import com.pedropathing.util.NanoTimer;
 import com.pedropathing.util.Timer;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -23,7 +24,7 @@ import pedroPathing.constants.FConstants;
 import pedroPathing.constants.LConstants;
 
 @Config
-@Autonomous(name = "arm auto arm", group = "Z")
+@Disabled
 public class arm_auto_code extends OpMode {
     private Follower follower;
     private Timer opmodeTimer; // Timers for progression of states

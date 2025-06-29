@@ -14,6 +14,7 @@ import com.pedropathing.pathgen.Point;
 import com.pedropathing.util.NanoTimer;
 import com.pedropathing.util.Timer;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -29,7 +30,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "right traj", group = "Z")
+@Disabled
 public class trajectory_planning extends OpMode {
 
     private Follower follower; // THe drivetrain with the calculations needed for path following
