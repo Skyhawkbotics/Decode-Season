@@ -8,8 +8,8 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import Config.subsystems.extend;
 
 @Config
-@TeleOp(group = "Tests", name = "Lift Test")
-public class outtest extends OpMode {
+@TeleOp(group = "Tests", name = "Extend Test")
+public class out_Test extends OpMode {
     public static int target = 0;
 
     extend e;
