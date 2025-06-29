@@ -8,6 +8,7 @@ import static com.pedropathing.follower.FollowerConstants.rightRearMotorName;
 import com.pedropathing.follower.Follower;
 import com.pedropathing.localization.Pose;
 import com.pedropathing.pathgen.PathChain;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.CRServo;
@@ -23,7 +24,7 @@ import pedroPathing.constants.LConstants;
 
 
 
-@TeleOp(name = "old", group = "MAIN")
+@Disabled
 public class old_opmode extends OpMode {
     private Follower follower;
 

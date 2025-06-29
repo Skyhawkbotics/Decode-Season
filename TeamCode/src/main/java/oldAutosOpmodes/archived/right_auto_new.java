@@ -19,6 +19,7 @@ import com.pedropathing.pathgen.Point;
 import com.pedropathing.util.NanoTimer;
 import com.pedropathing.util.Timer;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
@@ -35,7 +36,7 @@ import pedroPathing.constants.LConstants;
 
 
 @Config
-@Autonomous(name = "RIGHT AUTO", group = "Z")
+@Disabled
 /// 5+0 for state
 public class right_auto_new extends OpMode {
 

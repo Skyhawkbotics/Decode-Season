@@ -12,6 +12,7 @@ import com.pedropathing.pathgen.BezierLine;
 import com.pedropathing.pathgen.Path;
 import com.pedropathing.pathgen.PathChain;
 import com.pedropathing.pathgen.Point;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -26,7 +27,7 @@ import pedroPathing.constants.FConstants;
 import pedroPathing.constants.LConstants;
 
 
-@TeleOp(name = "opmode MAIN ", group = "MAIN")
+@Disabled
 public class opmode_MAIN_Redesign extends OpMode {
     private Follower follower;
 
@@ -89,8 +90,6 @@ public class opmode_MAIN_Redesign extends OpMode {
 
     double driving_multiplier;
 
-    int nigga;
-    int nigga2;
 
     private final ElapsedTime runtime = new ElapsedTime();
 

@@ -1,11 +1,12 @@
 package oldAutosOpmodes.opmode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name="Mecanum Drive w/o Odometry (Robot centric)", group="Iterative Opmode")
+@Disabled
 
 
 public class Mecanum_drive extends OpMode{
